@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 1000px;
+    overflow-x: hidden;
+    background-color:#bdc1c5;
+}
+.picture img{
+    width: 90%;
+    height: auto;
+    padding: 30px 10px 10px 15px;
+}
+article {
+    padding: 10px;
+}
+.title {
+    text-transform: uppercase;
+    font-size: 120%;
+    width: 200px;
+    height: 80px;
+    background-color: black;
+    color: #FFFFFF;
+    padding: 40px 30px 10px 15px;
+   
+}
+.first_p {
+    text-transform: uppercase;
+    color: #878889;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 180%;
+    margin-bottom: 10px;
+}
+.second_p {
+    font-size: 100%;
+    text-transform: capitalize;
+    font-style: italic;
+    margin-left: 100px;
+}
+.block_1 {
+    width: 200px;
+    height: 800px;
+    background-color: black;
+    color: #FFFFFF;
+}
+.name div {
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+.name div:nth-child(2) {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.name div p:nth-child(2n+1) {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.name div p:nth-child(2n+2) {
+    font-style: italic;
+    font-weight: lighter;
+}
+div .note_1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.list_star {
+    list-style: none;
+    text-transform: capitalize;
+    font-style: italic;
+}
+.list_star li::before {
+    content: "★";
+    margin-right: 5px;
+}
+article .block_1,
+article .block_2 {
+    display:inline-block;
+    float: left;
+}
+.block_2 {
+    width: 700px;
+    height: 800px;
+    background-color: #FFFFFF;
+    margin-left: 30px;
+}
+div .year,
+div .describe {
+    display: inline-block;
+    float: left;
+}
+.note_2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #9DA3A7;
+    margin-left: 10px;
+}
+.year p {
+    font-weight: bolder;
+    margin-left: 5px;
+    margin-bottom: 65px;
+    margin-right: 10px;
+}
+.describe div p:nth-child(1) {
+    text-transform: uppercase;
+    color: #878889;
+    font-size: 20px;
+}
+.describe div p:nth-child(2) {
+    font-style: italic;
+    color: #878889;
+    font-size: 20px;
+}
+.describe div p:nth-child(3) {
+    font-size: 15px;
+    font-style: italic;
+}
+.describe div {
+    padding-bottom: 16px;
+}
+.div_1 {
+    height: 280px;
+}
+.div_2 {
+    height: 200px;
+}
+.div_3 {
+    height: 150px;
+}
+.div_3 .list,
+.div_3 .colum {
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+.colum_1-1 {
+    width: 170px;
+    height: 10px;
+    background-color: black;
+}
+.colum_1-2 {
+    width: 30px;
+    height: 10px;
+    background-color:#878889;
+}
+.colum .colum_1-1,
+.colum .colum_1-2 {
+    display: inline-block;
+    float: left;
+}
+.colum_2-1 {
+    width: 140px;
+    height: 10px;
+    background-color: black;
+}
+.colum_2-2 {
+    width: 60px;
+    height: 10px;
+    background-color:#878889;
+}
+.colum .colum_2-1,
+.colum .colum_2-2 {
+    display: inline-block;
+    float: left;
+}
+.colum_3-1 {
+    width: 170px;
+    height: 10px;
+    background-color: black;
+}
+.colum_3-2 {
+    width: 30px;
+    height: 10px;
+    background-color:#878889;
+}
+.colum .colum_3-1,
+.colum .colum_3-2 {
+    display: inline-block;
+    float: left;
+}
+.colum_4-1 {
+    width: 140px;
+    height: 10px;
+    background-color: black;
+}
+.colum_4-2 {
+    width: 60px;
+    height: 10px;
+    background-color:#878889;
+}
+.colum .colum_4-1,
+.colum .colum_4-2 {
+    display: inline-block;
+    float: left;
+}
+.list {
+    font-weight: bolder;
+    margin-top: 5px;
+}   
+.colum div {
+    margin-top: 8px;
+    
+}
