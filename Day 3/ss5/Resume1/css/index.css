@@ -203,8 +203,11 @@ div .describe {
 .list {
     font-weight: bolder;
     margin-top: 5px;
+    width: 150px;
 }   
 .colum div {
-    margin-top: 8px;
-    
+    margin-top: 8px;   
+}
+.colum {
+    width: 220px;
 }
