@@ -8,7 +8,8 @@ body {
     font-family: 'Lato',Arial, Helvetica, sans-serif;
 }
 .container {
-    width: 1000px;
+    width: 1200px;
+    height: 1400px;
     overflow-x: hidden;
     background-color:#bdc1c5;
 }
@@ -18,40 +19,130 @@ body {
     padding: 10px 0px 30px 20px;
 
 }
-.container article {
+/* .container article {
    padding-top: 10px;
-}
-.block_1 .picture,
-.block_1 .title {
+} */
+header .picture,
+header .title {
     display: inline-block;
-    float: left;
-    align-items: center;
+    /* float: left; */
 }
 .picture {
-    width: 300px;
+    width: 250px;
+    height: 200px;
 }
 .title {
-    width: 700px;
+    width:calc(100% - 350px);
+    height: 200px;
+    vertical-align: top;
 }
 .title p:first-child {
     text-transform: uppercase;
     font-size: 40px;
     color: #242424;
     padding-top: 30px;
+    padding-bottom: 10px;
+    text-align:justify;
 }
 .title p:last-child {
     text-transform: uppercase;
     color: #242424;
     font-size: 20px;
-    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.contact p {
+/* .contact{
+    width: 400px;
+    height: 200px;
+} */
+.text  {    
     text-transform: uppercase;
     font-size: 15px;
-    text-align: center;
+    margin-left: 50px;
 }
-.contact .line {
-    width: 200px;
+.line {
+    width: 300px;
     height: 5px;
     background-color: coral;
+}
+/* .profile {
+    width: 600px;
+    height: 200px;
+}
+.block_1 .contact,
+.block_1 .profile {
+    display: inline-block;
+}
+.contact .line1 {
+    width: 500px;
+    height: 5px;
+    background-color: coral;
+    float:right;
+} */
+.text_1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.list {
+    list-style: none;
+    margin-bottom: 3px;
+}
+.list li::before {
+    content: "-";
+    margin-right: 5px;
+}
+.block_1 .block_1-1 {
+    margin-bottom: 15px ;
+}
+.line1 {
+    width: 700px;
+    height: 5px;
+    background-color: coral;
+}
+.block .block_1,
+.block .block_2 {
+    display: inline-block;
+    vertical-align: top;    
+}
+.block_1 {
+    width: 400px;
+    height:700px;
+}
+.block_2 {
+    width: 700px;
+    height:700px;
+}
+.text_2 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.block_2-3 .div {
+    padding-bottom: 8px;
+}
+.block_2-5 {
+    display: flex;
+}
+.flex {
+    display: flex;
+}     
+.skill_name {
+    width: 120px;
+    font-weight: bold;
+}
+.skill_level {
+    height: 8px;
+    width: 200px;
+    flex: 1;
+}
+.skill_percent {
+    background-color: rgb(59, 145, 243);
+}
+.skill_empty {
+    background-color: rgb(14, 228, 53);
+    flex: 1;
+}
+.skill_wrapper {
+    margin-top: 10px;
+    width: 320px;
+    justify-content: center;
 }
