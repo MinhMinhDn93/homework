@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class=" content ">
+            <div>
+                <h1>Respon Checkout Form</h1>
+                <div class="form">
+                    <form>
+                        <div class="input_row">
+                            <h2>Billing Address</h2>
+                        </div>
+                        <div class="input_row">
+                            <label for="name"><i class="fa-solid fa-user"></i> Full Name</label>
+                            <input placeholder="john M. Doe" autofocus minlength="4" maxlength="50" id="name" type="text"
+                                name="name">
+                        </div>
+                        <div class="input_row">
+                            <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                            <input placeholder="john@example.com" id="email" type="email" name="email">
+                        </div>
+                        <div class="input_row">
+                            <label for="tel"><i class="fa-solid fa-address-card"></i> Address</label>
+                            <input placeholder="542 W. 15th Street" id="address" type="text" name="address">
+                        </div>
+                        <div class="input_row">
+                            <label for="city"><i class="fa-sharp fa-solid fa-city"></i> City</label>
+                            <input placeholder="New York" id="city" type="text" name="city">
+                        </div>
+                        <div class="input_row_1">
+                            <div class="input_row_1-1">
+                                <label for="state">State</label>
+                                <input placeholder="NY" id="state" type="text" name="state">
+                            </div>
+                            <div class="input_row_1-1">
+                                <label for="zip">Zip</label>
+                                <input placeholder="10001" max="5" id="zip" type="number" name="zip">
+                            </div>
+                        </div>
+                    </form>
+                    <form>
+                        <div class="input_row">
+                            <h2>Payment</h2>
+                        </div>
+                        <div class="input_row">
+                            <label for="card">Accept Cards</label>
+                            <img src="img/img.png" />
+                        </div>
+                        <div class="input_row">
+                            <label for="namecard">Name on Cards</label>
+                            <input placeholder="John More Doe" id="namecard" type="text" name="namecard">
+                        </div>
+                        <div class="input_row">
+                            <label for="credit">Credit card number</label>
+                            <input placeholder="1111-2222-3333-4444" id="credit" type="number" name="credit">
+                        </div>
+                        <div class="input_row">
+                            <label for="month">Exp Month</label>
+                            <input placeholder="September" id="month" type="datetime" name="month">
+                        </div>
+                        <div class="input_row_1">
+                            <div class="input_row_1-1">
+                                <label for="year">Exp Year</label>
+                                <input placeholder="2018" id="year" type="year" name="year">
+                            </div>
+                            <div class="input_row_1-1">
+                                <label for="cvv">CVV</label>
+                                <input placeholder="352" maxlength="3" id="cvv" type="number" name="cvv">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="form_1">
+                    <form>
+                        <div class="input_row_2">
+                            <label for="checkbox">
+                                <input type="checkbox" name="check"> Shipping address same as billing
+                            </label>
+                        </div>
+                        <button type="submit"> Continue to checkout</button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>Cart</tr>
+                        <tr><i class="fa-sharp fa-solid fa-cart-shopping"></i>4</tr>
+                    </thead>
+                    <tbody>
+                        <tr>Item 1</tr>
+                        <tr>$15</tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
