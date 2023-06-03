@@ -37,7 +37,7 @@ form .input_row {
     min-height: 1100px;
     padding-top: 50px;
     margin: 0 50px;
-    flex-direction: column;
+    column-gap: 20px;
 }
 
 .form {
@@ -121,4 +121,14 @@ button {
 }
 .form_1 form {
     padding-bottom:  10px;
+}
+table {
+    width: 200px;
+    height: 200px;
+    background-color: #F2F2F2;
+    c
+}
+.block_2 {
+    margin-top: 43px;
+    padding-bottom: 5px;
 }
