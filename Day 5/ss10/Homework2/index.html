@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form>
+        <div class="input_row">
+            <h2>Sign Up</h2>
+        </div>
+        <div class="input_row">
+            <div class="title">Please fill in this form to creat an account</div>
+        </div>
+        <div class="input_row">
+            <label for="email">Email</label>
+            <input autofocus placeholder="Enter email"  id="email" type="email" name="email">
+        </div>
+        <div class="input_row">
+            <label for="password">Password</label>
+            <input placeholder="Enter password" pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$"  id="password" type="password" name="password">
+        </div>
+        <div class="input_row">
+            <label for="password"> Repeat Password</label>
+            <input placeholder="Repeat password" pattern="^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$"  id="password" type="password" name="password">
+        </div>
+        <div class="input_row">
+            <label>
+                <input type="checkbox">Remember me
+            </label>
+        </div>
+        <div class="input_row">
+            <p>By creating an account you agree to out <a>Term&Privacy</a></p>
+        </div>
+        <div class="input_row">
+            <div class="flex">
+                <button class="button cancel" type="reset">Cancel</button>
+                <button  class="button" type="submit" value="login">Sign Up</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
