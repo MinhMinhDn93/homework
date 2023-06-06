@@ -43,9 +43,9 @@
         // document.getElementById("text4").innerHTML = (parseInt(a) - parseInt(b))
         // var button = document.getElementById("btn");
         // button.onclick = function(){ alert("Bạn có chắc muốn xóa record này không?")}
-        function deleteData() {confirm('Bạn có muốn xóa dữ liệu này không?')};
-        
-        console.log(deleteData)
+        function deleteData() { if (confirm('Bạn có muốn xóa dữ liệu này không?')){console.log('Xóa thành công')}
+        else {console.log('Hủy bỏ')}
+        }; 
         // let getInput = prompt ('Giá trị của biến getIput là:');
         // if (isNaN(getInput)) { console.log('Giá trị không phải là số')}
         // else {console.log('Giá trị là số')}
