@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color:#ffffff;
+}
+header {
+    width: 1200px;  
+    height: 150px;
+    display: block;
+    background-color:#212121;
+    color: #ffffff;
+    padding: 30px 100px;
+}
+main {
+    width: 1200px;  
+    height: 1200px;
+    display: block;
+    background-color:#ffffff;
+    justify-content: center;
+    color: #ffffff;
+}
+footer {
+    width: 1200px;  
+    height: 300px;
+    display: block;
+    background-color:#212121;
+    color: #ffffff;
+    justify-content: space-between;
+}
+section {
+    width: 700px;  
+    height: 1200px;
+    display: block;
+    background-color:#1AA6DD;
+    justify-content:space-around;
+    flex-direction: column;
+    padding: 30px 25px;
+}
+aside {
+    width: calc((100% - 200px) - 700px);
+    height: 1200px;
+    display: block;
+    background-color:#ECF000;
+}
+.flex {
+    display: flex;
+}
+.title {
+    background-color: #FF6700;
+    width: 1000px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav>ul {
+    display: flex;
+    column-gap: 30px;
+    background-color: #FF6700;
+    padding: 10px 20px;
+    height: 60px;
+    align-items: center;
+    justify-content:flex-end;
+}
+nav>ul>li>a {
+    color: #111;
+    cursor: pointer;
+    line-height: 60px;
+}
+nav>ul>li:hover {
+    background-color:#a94605; 
+}
+nav>ul>li {
+    height: 60px;
+    list-style: none;
+    position: relative;
+    
+}
+.childs {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #ffffff;
+    color: #111;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+    min-width: 150px;
+    height: 120px;
+}
+nav>ul>li:hover .childs {
+    display: block;
+}
+nav>ul>li:hover .childs a {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+}
+nav>ul>li:hover .childs a:hover {
+    color: aqua;
+}
+.childs a {
+    margin-bottom: 10px;
+}
+.content_1 {
+    background-color: #111;
+    width: 650px;
+    height: 900px;
+    justify-content: space-around;
+    padding: 25px 0px;
+    color: #111;
+}
+.content_2 {
+    background-color: #111;
+    width: 650px;
+    height: 200px;
+}
+.product_photo {
+    width: 400px;
+    height: 850px;
+    background-color: #ffffff;
+}
+.product_info {
+    width: calc((100% - 50px) - 400px);
+    height:850px;
+    background-color: #ffffff;
+}
+.item {
+    width: calc((100% - 90px) / 4 );
+    background-color: #787272;
+}

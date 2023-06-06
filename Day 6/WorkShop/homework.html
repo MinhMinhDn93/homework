@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square {
+            border: 1px solid yellow;
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <ul>
+        <li>Tên của bạn là :<span style="font-weight: bold;" id="text1"></span></li>
+        <li>Mật khẩu của bạn là :<span style="font-weight: bold;" id="text2"></span></li>
+    </ul> -->
+    <!-- <ul>
+        <li>Kết quả a+b là :<span style="font-weight: bold;" id="text3"></span></li>
+        <li>Kết quả a-b là :<span style="font-weight: bold;" id="text4"></span></li>
+    </ul> -->
+    <button id="btn" onclick="deleteData()" value="Show Alert">Delete</button>
+    <div onmouseover="console.log('Bạn đã rê chuột lên hình vuông')" class="square"></div>
+    <button onclick="alert('Bạn đã thêm vào giỏ hàng thành công')">Thêm vào giỏ hàng</button><br>
+    <input id="name" type="text" onkeypress="onKeyPress()" onkeyup="onKeyUp()" onkeydown="onKeyDown()">
+    <script>
+        // let myUser = prompt ('Tên của bạn là:');
+        // let myPass = prompt ('Mật khẩu của bạn là:');
+        // console.log (myUser)
+        // console.log (myPass)
+        // document.getElementById("text1").innerHTML = myUser
+        // document.getElementById("text2").innerHTML = myPass
+        // let a= prompt ('Nhập giá trị a:');
+        // let b = prompt ('Nhập giá trị b:');
+        // console.log (parseInt(a) + parseInt(b))
+        // console.log (parseInt(a) - parseInt(b))
+        // document.getElementById("text3").innerHTML = (parseInt(a) + parseInt(b))
+        // document.getElementById("text4").innerHTML = (parseInt(a) - parseInt(b))
+        // var button = document.getElementById("btn");
+        // button.onclick = function(){ alert("Bạn có chắc muốn xóa record này không?")}
+        function deleteData() {confirm('Bạn có muốn xóa dữ liệu này không?')};
+        
+        console.log(deleteData)
+        // let getInput = prompt ('Giá trị của biến getIput là:');
+        // if (isNaN(getInput)) { console.log('Giá trị không phải là số')}
+        // else {console.log('Giá trị là số')}
+        function onKeyPress() {
+            console.log("Đã nhấn phím và giữ");
+        }
+        function onKeyUp() {
+            console.log("Đã nhã phím");
+        }
+        function onKeyDown() {
+            console.log("Đã nhấn phím");
+        }
+    </script>
+</body>
+</html>
