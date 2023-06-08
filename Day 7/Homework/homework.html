@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button id="btn_1" value="money">Ấn N : để nộp tiền</button>
+        <button id="btn_2" value="money">Ấn R : để rút tiền</button>
+        <button id="btn_3" value="money">Ấn X : để xem số dư</button>
+    </div>
+    <script>
+        // Task 1
+        // let myScoreMedium = parseInt(prompt('Nhập điểm trung bình:'));
+        // if (myScoreMedium >= 9){
+        //     console.log('Xuất sắc');
+        //     document.write('Xuất sắc')
+        // } else if (myScoreMedium < 9 && myScoreMedium >= 8){
+        //     console.log('Giỏi');
+        //     document.write('Giỏi')
+        // } else if (myScoreMedium < 8 && myScoreMedium >= 6.5){
+        //     console.log('Khá');
+        //     document.write('Khá')
+        // } else if (myScoreMedium < 6.5 && myScoreMedium >= 5){
+        //     console.log('Trung Bình');
+        //     document.write('Trung Bình')
+        // } else {
+        //     console.log('Yếu');
+        //     document.write('Yếu')
+        // }
+        //Task 2
+        // let a = parseInt(prompt('Nhập số chữ điện:'));
+        // if (a <= 100) {
+        //     console.log('Số tiền phải trả là 550 đồng/ chữ');
+        //     document.write('Số tiền phải trả là 550 đồng/ chữ')
+        // } else if  ( a > 100 && a <= 150) {
+        //     console.log('Số tiền phải trả là 900 đồng/ chữ');
+        //     document.write('Số tiền phải trả là 900 đồng/ chữ')
+        // } else if (a > 150 && a <= 200) {
+        //     console.log('Số tiền phải trả là 1210 đồng/ chữ');
+        //     document.write('Số tiền phải trả là 1210 đồng/ chữ')
+        // } else if (a > 200 && a <= 250) {
+        //     console.log('Số tiền phải trả là 1340 đồng/ chữ');
+        //     document.write('Số tiền phải trả là 1340 đồng/ chữ')
+        // } else if (a > 300) {
+        //     console.log('Số tiền phải trả là 1400 đồng/ chữ');
+        //     document.write('Số tiền phải trả là 1400 đồng/ chữ')
+        // }
+        //Task 3 - if else 
+        // let b = parseInt(prompt ('Nhập tháng trong năm'));
+        // if ( b === 1 || b === 2 ||  b === 3) {
+        //     console.log('Xuân');
+        //     document.write('Xuân')
+        // } else if ( b === 4 ||  b === 5 ||  b === 6)
+        // {
+        //     console.log('Hạ');
+        //     document.write('Hạ')
+        // } else if ( b === 7 ||  b === 8 ||  b === 9)
+        // {
+        //     console.log('Thu');
+        //     document.write('Thu')
+        // } else if  ( b=== 10 ||  b === 11 || b === 12)
+        // {
+        //     console.log('Đông');
+        //     document.write('Đông')
+        // }
+        //Task 3 Switch
+        // let b = parseInt(prompt('Nhập tháng trong năm'));
+        // switch (b) {
+        //     case 1:
+        //         console.log('Xuân');
+        //         document.write('Xuân')
+        //         break;
+        //     case 2:
+        //         console.log('Xuân');
+        //         document.write('Xuân')
+        //         break;
+        //     case 3:
+        //         console.log('Xuân');
+        //         document.write('Xuân')
+        //         break;
+        //     case 4:
+        //         console.log('Hạ');
+        //         document.write('Hạ')
+        //         break;
+        //     case 5:
+        //         console.log('Hạ');
+        //         document.write('Hạ')
+        //         break;
+        //     case 6:
+        //         console.log('Hạ');
+        //         document.write('Hạ')
+        //         break;
+        //     case 7:
+        //         console.log('Thu');
+        //         document.write('Thu')
+        //         break;
+        //     case 8:
+        //         console.log('Thu');
+        //         document.write('Thu')
+        //         break;
+        //     case 9:
+        //         console.log('Thu');
+        //         document.write('Thu')
+        //         break;
+        //     case 10:
+        //         console.log('Đông');
+        //         document.write('Đông')
+        //         break;
+        //     case 11:
+        //         console.log('Đông');
+        //         document.write('Đông')
+        //         break;
+        //     case 12:
+        //         console.log('Đông');
+        //         document.write('Đông')
+        //         break;
+
+        // }
+        //Task 5 in bảng cửu chương
+        // for (let i = 1; i <= 9; i++) {
+        //     for (let j = 2; j <= 9; j++) {
+        //         document.write( j + "x" + i + "=" + (i*j));
+        //         document.write("\t")
+        //     }
+        //     document.write("</br>")
+        // }
+        // Task 6 Rút tiền
+        let amount = 1000000;
+        let n = document.getElementById("btn_1");
+        n.onclick = function() { let inputn = prompt('Nhập số tiền cần nộp:');
+        console.log(inputn)}; 
+        let r = document.getElementById("btn_2");
+        r.onclick = function() { let inputr = prompt('Nhập số tiền cần rút:');
+        console.log(inputr)};
+        
+
+    </script>
+</body>
+
+</html>

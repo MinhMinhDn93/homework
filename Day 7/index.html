@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let myNumber = prompt('Nhập giá trị:')
+        if (myNumber%2==0) {
+            console.log('Số chẵn');
+        } else {
+            console.log('Sỗ lẽ');
+        }
+        let myDay = parseInt(prompt ('Nhập ngày trong tuần'));
+        if (myDay === 2 || myDay === 3) {
+            console.log('hôm nay là ngày đầu tuần');
+            document.write('Hôm nay là ngày đầu tuần')
+        } else if (myDay === 4 || myDay === 5 || myDay === 6)
+        {
+            console.log('hôm nay là ngày giữa tuần');
+            document.write('Hôm nay là ngày giữa tuần')
+        } else if (myDay === 7 || myDay === 8)
+        {
+            console.log('hôm nay là ngày cuối tuần');
+            document.write('Hôm nay là ngày cuối tuần')
+        } else {
+            console.log('Không hợp lệ');
+            document.write('Không hợp lệ')
+        }
+        let myArr = ['Thứ 2','Thứ y','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7']
+        myArr.push('Chủ Nhật');
+        myArr.splice(3, 'Thứ 4');
+        myArr.splice(1, 1);   
+        console.log(myArr);
+
+    </script>
+</body>
+</html>
