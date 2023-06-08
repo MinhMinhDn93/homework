@@ -22,13 +22,14 @@
             {nameproduct:'Áo khoác gió NorthFace Size L', quantity:'1', cost:'600000'},
             {nameproduct:'Quần jean nam size 30', quantity:'1', cost:'350000'}
         ]
+        let sum = 0;
         let table = `<table>`;
             table += `<tr><td>NameProduct</td><td>Quantity</td><td>Cost</td></tr>`;
         for (row in bill) {
             table += `<tr><td>${bill[row].nameproduct}</td><td>${bill[row].quantity}</td><td>${bill[row].cost}</td></tr>`;
-            let sum = (bill[row].quantity) * (bill[row].cost);
+            sum += (bill[row].quantity) * (bill[row].cost);
         }
-        table += `<tr><td>Total</td><td colspan="2" style="text-align: center;"></td></tr>`;
+        table += `<tr><td>Total</td><td colspan="2" style="text-align: center;">` + sum + `</td></tr>`;
         table += `</table>`;
         document.write(table);
 
