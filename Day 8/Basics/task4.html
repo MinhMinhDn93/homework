@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+
+<body>
+    <input placeholder="username" type="text" name="username" class="username" value="" />
+    <input placeholder="password" type="text" name="password" class="password" value="" />
+    <script>
+        let inputName = document.querySelector(".username");
+        let inputPass = document.querySelector(".password");
+        inputName.value = "1";
+        console.log('<<== inputName ==>>',inputName.value);
+        inputPass.value = "2";
+        console.log('<<== inputName ==>>',inputPass.value);
+        inputName.id = "name";
+        console.log('<<== ID ==>>',inputName.id);
+        console.log('<<== inputName ==>>',inputName);
+        inputPass.id = "pass";
+        console.log('<<== ID ==>>',inputPass.id);
+        console.log('<<== inputPass ==>>',inputPass);
+    </script>
+</body>
+
+</html>
