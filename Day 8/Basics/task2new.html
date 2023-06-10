@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table with JS</title>
+    <style>
+        th {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table tr td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="myTable">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Amount</th>
+        </tr>
+    </table>
+</body>
+<script>
+    const users = [
+        { id: 1, name: 'iPhone 12 Pro Max', price: 250000000, quantity: 1 },
+        { id: 2, name: 'Samsung Galaxy S21', price: 32000000, quantity: 1 },
+        { id: 3, name: 'Xiaomi Note 11', price: 18000000, quantity: 2 },
+        { id: 4, name: 'Galaxy Ford Pro', price: 47000000, quantity: 1 },
+        { id: 5, name: 'OPPO Find N2 Flip 5G', price: 19990000, quantity: 3 }
+    ];
+    let i;
+    let table = document.getElementById("myTable");
+    let amount = 0;
+    for ( i = 0; i < users.length; i++) {
+        let row = table.insertRow(parseInt(i + 1));
+        let cell1 = row.insertCell(0);
+        cell1.innerText = users[i].id
+        let cell2 = row.insertCell(1);
+        cell2.innerText = users[i].name
+        let cell3 = row.insertCell(2);
+        cell3.innerText = users[i].price
+        let cell4 = row.insertCell(3);
+        cell4.innerText = users[i].quantity
+        let cell5 = row.insertCell(4);
+        cell5.innerText = users[i].quantity * users[i].price
+        amount = amount + (users[i].quantity * users[i].price)
+    }
+    let rowTotal = table.insertRow(6);
+    let cell1RowTotal = rowTotal.insertCell(0);
+    let cell2RowTotal = rowTotal.insertCell(1);
+    cell1RowTotal.innerText = "Total";
+    cell1RowTotal.colSpan = "4";
+    cell2RowTotal.innerText = amount;
+</script>
+
+</html>

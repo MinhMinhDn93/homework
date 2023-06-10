@@ -10,9 +10,9 @@
 
 <body>
     <div>
-        <button id="btn_1" value="money">Ấn N : để nộp tiền</button>
+        <!-- <button id="btn_1" value="money">Ấn N : để nộp tiền</button>
         <button id="btn_2" value="money">Ấn R : để rút tiền</button>
-        <button id="btn_3" value="money">Ấn X : để xem số dư</button>
+        <button id="btn_3" value="money">Ấn X : để xem số dư</button> -->
     </div>
     <script>
         // Task 1
@@ -141,14 +141,44 @@
         //     document.write("</br>")
         // }
         // Task 6 Rút tiền
-        // let amount = 1000000;
+        let amount = 1000000;
         // let n = document.getElementById("btn_1");
         // n.onclick = function() { let inputn = prompt('Nhập số tiền cần nộp:');
         // console.log(inputn)}; 
         // let r = document.getElementById("btn_2");
         // r.onclick = function() { let inputr = prompt('Nhập số tiền cần rút:');
         // console.log(inputr)};
-        
+        function ATM(){
+            let input = prompt("Vui lòng chọn chức năng:\n-Ấn N để nộp tiền\n-Ấn R để rút tiền\n-Ấn X để xem số dư")
+            input = input.toLowerCase(input)
+            switch(input){
+                case "x":
+                    alert("Số dư hiện tại: " + amount)
+                    ATM();
+                    break;
+                case "r":
+                    let getMoney = prompt("Nhập số tiền muốn rút");
+                    if(getMoney % 50000 == 0 && amount > getMoney){
+                        amount = amount - getMoney;
+                        alert("Số dư hiện tại: " + amount)
+                        ATM();   
+                    }else{
+                        alert("Số tiền rút không hợp lệ")
+                        ATM();
+                    }
+                    break;
+                case "n":
+                    let deposit =  prompt("Nhập số tiền muốn nộp");
+                    amount += parseInt(deposit);
+                    ATM();
+                    break;
+                default:
+                    alert("Vui lòng chọn đúng chức năng");
+                    ATM();
+                    break;
+            }
+        }
+        ATM();
 
     </script>
 </body>

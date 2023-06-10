@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculate(a,b,type) {
+            switch (type) {
+                case 'add':
+                return a + b;
+                case 'sub':
+                return a - b; 
+                case 'mul':
+                return a * b; 
+                case 'div':
+                return a % b;          
+                default:
+                return NaN;
+            }
+        }
+       
+        console.log(calculate(2,3,'add'));
+    </script>
+</body>
+</html>

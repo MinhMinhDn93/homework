@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: flex;
+
+            margin-top: 10px;
+        }
+        form div {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="quantity">Số lượng :</label>
+            <input id="quantity" value="1" type="number" name="quantity" onchange="change()" />
+        </div>
+        <div>
+            <label for="price">Giá tiền :</label>
+            <input id="price" value="0" type="number" name="price" onchange="change()" />
+        </div>
+        <div>Giá tiền:<span id="result" style="color: red;"></span></div>
+        <button onclick="increaseFuntion()" id="increase" type='button'>+</button>
+        <button onclick="descreaseFuntion()" id="descrease" type='button'>-</button>
+    </form>
+    <script>
+        function change() {
+            let getQuantity = document.getElementById("quantity").value
+            let getPrice = document.getElementById("price").value
+            document.getElementById("result").innerHTML = getQuantity * getPrice;
+        }
+        function increaseFuntion() {
+            let getQuantity = document.getElementById("quantity").value;
+            let getPrice = document.getElementById("price").value;
+            getQuantity++;
+            document.getElementById("quantity").value = getQuantity;
+            document.getElementById("result").innerHTML = getQuantity * getPrice;
+        }
+        function descreaseFuntion() {
+            let getQuantity = document.getElementById("quantity").value;
+            let getPrice = document.getElementById("price").value;
+            getQuantity--;
+            document.getElementById("quantity").value = getQuantity;
+            document.getElementById("result").innerHTML = getQuantity * getPrice;
+        }
+
+    </script>
+</body>
+
+</html>
