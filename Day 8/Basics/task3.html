@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="child_one">Child 1</li>
+        <li class="child_two">
+            <img src="images/photo.png" alt="photo" />
+        </li>
+        <li class="child_three"><a href="link3">Child 3</a></li>
+    </ul>
+    <script>
+        let ul = document.querySelector('#list');
+        ul.classList = 'list';
+        console.log('<<== class ==>>',ul.classList);
+        let child1 = document.querySelector(".child_one");
+        console.log('<<== child1 ==>>',child1);
+        let img = document.querySelector("img");
+        console.log('<<== src ==>>',img.src);
+        console.log('<<== alt ==>>',img.alt);
+        img.src = "https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/246196/Samsung-Galaxy-A53-xanh-thumb-600x600.jpg";
+        img.alt = "image";
+        console.log('<<== src ==>>',img.src);
+        console.log('<<== alt ==>>',img.alt);
+        let child3 = document.getElementsByClassName("child_three");
+        console.log('<<== class ==>>',child3);
+    </script>
+</body>
+</html>
