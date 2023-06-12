@@ -1,0 +1,102 @@
+/* Tablet*/
+@media screen and (max-width : 769px) {
+    .container {
+        padding: 0 15px;
+    }
+    .main-content-wrapper {
+        flex-direction: column;
+    }
+    main aside , main .main-content {
+        width: 100%;
+    }
+    main aside {
+        margin-top: 20px;
+    }
+    .footer-wrapper,.product-list {
+        flex-wrap: wrap;
+    }
+    .product-list {
+        row-gap: 10px;
+    }
+    .footer-wrapper .footer-col {
+        width: 50%;
+    }
+    .product-list .item {
+        width: calc((100% - 20px) / 3);
+    }
+}
+/* Mobile*/
+@media screen and (max-width : 426px) {
+    .product-list .item {
+        width: calc((100% - 10px) / 2);
+    }
+    .footer-wrapper {
+        flex-direction: column;
+        row-gap: 10px;  
+    }
+    .footer-wrapper .footer-col {
+        width: 100%;
+    }
+    .article-list {
+        margin-bottom: 20px;
+    }
+    article {
+        column-gap: 10px;
+    }
+    .article-list article .photo {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+    }
+    .article-list article .photo img {
+        width: 100%;
+        height: auto;
+    }
+    .article-list article .content {
+        flex: 1;
+    }
+   .header-nav ul {
+       display: none;
+    }
+    #toggle-mobile {
+        display: block;
+    }
+    #toggle-mobile span, 
+    #toggle-mobile span::before,
+    #toggle-mobile span::after {
+        display: inline-block;
+        width:30px;
+        height: 3px;
+        background-color: #fff;
+    }
+    #toggle-mobile span {
+        position: relative;
+    }
+    #toggle-mobile span::before,
+    #toggle-mobile span::after {
+        position: absolute;
+        content: " ";
+        left: 0;
+    }
+    #toggle-mobile span::before {
+        top: -5px;
+    }
+    #toggle-mobile span::after {  
+        bottom:-5px;
+    }
+    header {
+        position: relative;
+        height: 48px;
+     }
+    .header-nav.actived ul {
+        display: block;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background-color:#f5f5f5;
+        box-shadow: 2px 3px 10px rgba(0,0,0,0.3);
+     }
+     
+}
