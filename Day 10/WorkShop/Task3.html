@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #banner-home {
+            max-width: 600px;
+            position: relative;
+        }
+
+        #banner-home .owl-nav {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #banner-home .owl-nav .owl-pre,
+        #banner-home .owl-nav .owl-next {
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        #banner-home .owl-dots {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        #product {
+            background-color: #f3f3f3;
+        }
+        #product .items {
+            width: 300px;
+            height: 280px;
+        }
+        #product .items img {
+            width: 100%;
+            height: 280px;
+        }
+        #product .owl-nav {
+            position: absolute;
+            top: 40%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #product .owl-nav .owl-pre,
+        #product .owl-nav .owl-next {
+            background-color: rgba(255, 255, 255, 0.5);
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Carousel banner</h2>
+    <div id="banner-home" class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="https://salt.tikicdn.com/cache/w1080/ts/tikimsp/9c/82/90/5f5337c24b30b9d1467825d01b4e0128.png.webp" />
+        </div>
+        <div class="item">
+            <img src="https://salt.tikicdn.com/cache/w1080/ts/tikimsp/be/f1/d5/397d4a1268031b6fc611a2acc4bf5e83.png.webp" />
+        </div>
+        <div class="item">
+            <img src="https://salt.tikicdn.com/cache/w1080/ts/tikimsp/c3/b7/43/b164e8d7177ec2c79a15cec6b48ba789.png.webp" />
+        </div>
+        <div class="item">
+            <img src="https://salt.tikicdn.com/cache/w1080/ts/tikimsp/91/9f/47/ec8e60174b4d6ba76be2031365804d89.png.webp" />
+        </div>
+        <div class="item">
+            <img src="https://salt.tikicdn.com/cache/w1080/ts/tikimsp/83/72/9f/176a3db4d5a66542afca997cb5c4b689.png.webp" />
+        </div>
+    </div>    
+    <h2>Carousel Products</h2>
+    <div id="product" class="owl-carousel owl-theme">
+            <div class="item">
+                <img
+                    src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/246196/Samsung-Galaxy-A53-xanh-thumb-600x600.jpg" />
+            </div>
+            <div  class="item">
+                <img
+                    src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/7077/296856/befit-sporty-2-pink-tn-600x600.jpg" />
+            </div>
+            <div  class="item">
+                <img
+                    src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg" />
+            </div>
+            <div  class="item">
+                <img
+                    src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/44/253636/apple-macbook-pro-16-m1-pro-2021-10-core-cpu-600x600.jpg" />
+            </div>
+            <div  class="item">
+                <img
+                    src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/54/253802/bluetooth-airpods-pro-magsafe-charge-apple-mlwk3-thumb-600x600.jpeg" />
+            </div>
+            <div  class="item">
+                <img
+                    src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-den-thumb-600x600.jpg" />
+            </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('#banner-home').owlCarousel({
+            loop: true,
+            items: 1,
+            nav: true,
+            dots: true,
+        })
+        $('#product').owlCarousel({
+            loop: true,
+            items: 5,
+            nav: true,
+            dots: true,
+            margin: 10,
+        })
+    </script>
+</body>
+
+</html>
