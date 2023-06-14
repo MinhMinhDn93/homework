@@ -83,7 +83,7 @@ footer {
 /* Navigation */
 nav>ul {
     column-gap: 20px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     height: 20px;
     /* align-items: center; */
 }
@@ -100,7 +100,6 @@ nav>ul>li:hover {
 
 nav>ul>li {
     height: 20px;
-    list-style: none;
     position: relative;
 
 }

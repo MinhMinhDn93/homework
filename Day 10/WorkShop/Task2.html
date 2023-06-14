@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="addToCart1()">Add to Cart 1</button>
+    <button onclick="addToCart2()">Add to Cart 2</button>
+    <button onclick="clearAll()">Clear all</button>
+    <div id="result"></div>
+    <script>
+        // Lấy data đã lưu ở storage lên rồi render ra
+        const getData = () => {
+            if (typeof Storage !== 'undefined') {
+                let products = localStorage.getItem('products');
+                if (products) {
+                    return JSON.parse(products);
+                }
+            }
+        }
+        const products = getData();
+        let html = `<ul>`;
+        for (let index = 0; index < products.length; index++) {
+            html += `<li>${products[index].id}-${products[index].name}-${products[index].price}-${products[index].quantity}</li>`
+        }
+        html += `</ul>`;
+        document.querySelector("#result").innerHTML = html;
+
+        // Lưu xuống storage
+        function addToCart1() {
+            console.log('<<== addToCart ==>>');
+            let product = { id: 1, name: 'iPhone 4', price: 200, quantity: 1 }
+            if (typeof Storage !== 'undefined') {
+                //Kiểm tra products này đã tồn tại trong storage chưa? Nếu chưa thì thêm mới vào
+                let products = localStorage.getItem('products');
+                console.log('<<== products ==>>', products);
+                if (!products) {
+                    let productsArray = [];
+                    productsArray.push(product);
+                    localStorage.setItem('products', JSON.stringify(productsArray));
+                } else {
+                    let productsArray = JSON.parse(products);
+                    // Khai báo 1 biến "cờ" để check product đã tồn tại trong store hay chưa
+                    let flag = true;
+                    // Dùng vòng for check ID từng phần tử trong productsArray có trùng với product muốn thêm vào hay không.
+                    for (let i = 0; i < productsArray.length; i++) {
+                        //Nếu id product muốn thêm vào đã có trong store , cộng số lượng lên 1 đơn vị
+                        if (productsArray[i].id == product.id) {
+                            productsArray[i].quantity = productsArray[i].quantity + 1;
+                            localStorage.setItem('products', JSON.stringify(productsArray));
+                            // Thay đổi biến cờ để khi kết thúc vòng for ko cần thêm mới product nữa , vì đã có trong store
+                            flag = false
+                            break;
+                        }
+                    };
+                    // Check nếu "cờ" = true => product là thêm mới , chưa tồn tại trong store
+                    if (flag) {
+                        productsArray.push(product);
+                        localStorage.setItem('products', JSON.stringify(productsArray));
+                    }
+                }
+                location.reload();
+            } else {
+                console.log('<<== Browser does not support ==>>');
+            }
+        }
+        function clearAll() {
+            localStorage.clear();
+        }
+        function addToCart2() {
+            console.log('<<== addToCart ==>>');
+            let product = { id: 2, name: 'iPhone 11', price: 800, quantity: 1 }
+            if (typeof Storage !== 'undefined') {
+                let products = localStorage.getItem('products');
+                console.log('<<== products ==>>', products);
+                if (!products) {
+                    let productsArray = [];
+                    productsArray.push(product);
+                    localStorage.setItem('products', JSON.stringify(productsArray));
+                } else {
+                    let productsArray = JSON.parse(products);
+                    // Khai báo 1 biến "cờ" để check product đã tồn tại trong store hay chưa
+                    let flag = true;
+                    // Dùng vòng for check ID từng phần tử trong productsArray có trùng với product muốn thêm vào hay không.
+                    for (let i = 0; i < productsArray.length; i++) {
+                        //Nếu id product muốn thêm vào đã có trong store , cộng số lượng lên 1 đơn vị
+                        if (productsArray[i].id == product.id) {
+                            productsArray[i].quantity = productsArray[i].quantity + 1;
+                            localStorage.setItem('products', JSON.stringify(productsArray));
+                            // Thay đổi biến cờ để khi kết thúc vòng for ko cần thêm mới product nữa , vì đã có trong store
+                            flag = false
+                            break;
+                        }
+                    };
+                    // Check nếu "cờ" = true => product là thêm mới , chưa tồn tại trong store
+                    if (flag) {
+                        productsArray.push(product);
+                        localStorage.setItem('products', JSON.stringify(productsArray));
+                    }
+                }
+                location.reload();
+            } else {
+                console.log('<<== Browser does not support ==>>');
+            }
+        }
+        function clearAll() {
+            localStorage.clear();
+        }
+
+    </script>
+</body>
+
+</html>

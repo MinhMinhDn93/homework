@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="add" onclick="functionAdd()">Add</button>
+    <button id="delete" onclick="functionDel()">Delete</button>
+    <button id="clear" onclick="functionClear()">Clear</button>
+    <script>
+        //localStorage
+        // function functionAdd() {
+        //     localStorage.setItem('name','Minh');
+        //     localStorage.getItem('name');
+        // }
+        // function functionDel() {
+        //     localStorage.removeItem('name');
+        // }
+        // function functionClear() {
+        //     localStorage.clear();
+        // }
+         //sessionStorage
+        function functionAdd() {
+            sessionStorage.setItem('name','Minh');
+            sessionStorage.getItem('name');
+        }
+        function functionDel() {
+            sessionStorage.removeItem('name');
+        }
+        function functionClear() {
+            sessionStorage.clear();
+        }
+    </script>
+</body>
+</html>
