@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+
+<body>
+    <input placeholder="username" type="text" name="username" value="" />
+    <input placeholder="password" type="text" name="password" value="" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $('input[name="username"]').val("abcd");
+        $('input[name="password"]').val("1234");
+        $('input[name="username"]').attr("id","username");
+        $('input[name="password"]').attr("id","password");
+        let userName = $("#username").val();
+        console.log('<<== userName ==>>',userName);
+        let passWord = $("#password").val();
+        console.log('<<== passWord ==>>',passWord);
+    </script>
+</body>
+
+</html>

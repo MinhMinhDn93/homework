@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorkShop Day 08</title>
+</head>
+<body>
+    <!-- Task 2 -->
+    <form>
+        <label for="a">Nhập a:</label>
+        <input type="number" id="a" name="a" placeholder="Nhập a" /><br>
+        <label for="b">Nhập b:</label>
+        <input type="number" id="b" name="b" placeholder="Nhập b" /><br>
+        <label for="op">Operation:</label>
+        <select id="op" name="op">
+			<option value="add">Add</option>
+			<option value="subtract">Subtract</option>
+			<option value="multiply">Multiply</option>
+			<option value="divide">Divide</option>
+			<option value="modulus">Modulus</option>
+		</select><br><br>
+		<button type="button" id="calculate" >Calculate</button><br>
+		<label for="result">Result:</label>
+		<input type="text" id="result" readonly>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+        //Task 2
+        // function calculate() {
+        // let a = parseFloat(document.getElementById("a").value);
+        // let b = parseFloat(document.getElementById("b").value);
+        // var op = document.getElementById("op").value;
+        // var result;
+        // switch (op) {
+		// 		case "add":
+		// 			result = a + b;
+		// 			break;
+		// 		case "subtract":
+		// 			result = a - b;
+		// 			break;
+		// 		case "multiply":
+		// 			result = a * b;
+		// 			break;
+		// 		case "divide":
+		// 			result = a / b;
+		// 			break;
+		// 		case "modulus":
+		// 			result = a % b;
+		// 			break;
+		// 		default:
+		// 			result = "";
+		// 	}
+
+		// 	document.getElementById("result").value = result;
+        // }
+        $("#calculate").on("click", function(){
+            let a = parseFloat($("#a").val());
+            let b = parseFloat($("#b").val());
+            let op = $("#op").val();
+            let result;
+            switch (op) {
+				case "add":
+					result = a + b;
+					break;
+				case "subtract":
+					result = a - b;
+					break;
+				case "multiply":
+					result = a * b;
+					break;
+				case "divide":
+					result = a / b;
+					break;
+				case "modulus":
+					result = a % b;
+					break;
+				default:
+					result = "";
+			}
+            console.log('<<== result ==>>',result);
+            $("#result").val(result);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <ul id="list">
+        <li class="child_one">Child 1</li>
+        <li class="child_two">
+            <img src="images/photo.png" alt="photo" />
+        </li>
+        <li class="child_three"><a href="link3">Child 3</a></li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $("ul").addClass("list");
+        let child1 = $("ul#list>li:nth-child(1)").text();
+        console.log('<<== child1 ==>>',child1);
+        let child2Src = $("img").attr("src");
+        console.log('<<== child2 ==>>',child2Src);
+        let child2Alt = $("img").attr("alt");
+        console.log('<<== child2Alt ==>>',child2Alt);
+        $("img").attr("src","https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/42/246196/Samsung-Galaxy-A53-xanh-thumb-600x600.jpg");
+        $("img").attr("href","newphoto");
+        let child3 = $("ul#list>li:nth-child(3)").attr("class");
+        console.log('<<== child3 ==>>',child3);
+    </script>
+</body>
+</html>

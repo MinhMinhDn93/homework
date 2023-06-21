@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --main-color: #f80
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .justify-content-between {
+            justify-content: space-between;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .flex-direction-column {
+            flex-direction: column;
+        }
+
+        a {
+            text-decoration: none;
+            color: #111;
+        }
+
+        ul,
+        ol {
+            list-style: none
+        }
+
+        header {
+            background-color: var(--main-color);
+            color: #ffffff;
+        }
+
+        .header-middle {
+            padding: 10px 0;
+        }
+
+        nav>ul {
+            column-gap: 20px;
+            padding: 5px 20px;
+            height: 20px;
+            /* align-items: center; */
+        }
+
+        nav>ul>li>a {
+            color: #111;
+            cursor: pointer;
+            line-height: 20px;
+        }
+
+        nav>ul>li:hover {
+            background-color: #a94605;
+        }
+
+        nav>ul>li {
+            height: 20px;
+            position: relative;
+
+        }
+
+        .childs {
+            display: none;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            background-color: #ffffff;
+            color: #111;
+            box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+            min-width: 150px;
+            height: 120px;
+        }
+
+        nav>ul>li:hover .childs {
+            display: block;
+        }
+
+        nav>ul>li:hover .childs a {
+            display: block;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        nav>ul>li:hover .childs a:hover {
+            color: aqua;
+        }
+
+        .childs a {
+            margin-bottom: 10px;
+        }
+
+        #toggle-mobile {
+            display: none;
+        }
+
+        @media screen and (max-width : 426px) {
+            .header-nav ul {
+                display: none;
+            }
+
+            .header-nav.actived ul {
+                display: block;
+                position: absolute;
+                top: 48px;
+                left: 0;
+                right: 0;
+                height: 120px;
+                background-color: #f5f5f5;
+                box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            #toggle-mobile {
+                display: block;
+            }
+
+            #toggle-mobile span,
+            #toggle-mobile span::before,
+            #toggle-mobile span::after {
+                display: inline-block;
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+            }
+
+            #toggle-mobile span {
+                position: relative;
+            }
+
+            #toggle-mobile span::before,
+            #toggle-mobile span::after {
+                position: absolute;
+                content: " ";
+                left: 0;
+            }
+
+            #toggle-mobile span::before {
+                top: -5px;
+            }
+
+            #toggle-mobile span::after {
+                bottom: -5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-middle flex justify-content-between">
+                <div>
+                    <h2 style="color: white;">Magazines</h2>
+                </div>
+                <nav class="header-nav" id="header-nav">
+                    <ul class="flex">
+                        <li><a>Home</a></li>
+                        <li>
+                            <a>Blog</a>
+                            <div class="childs">
+                                <a>Tech</a>
+                                <a>Sport</a>
+                                <a>Fashion</a>
+                            </div>
+                        </li>
+                        <li><a>Shop</a></li>
+                        <li><a>Product</a></li>
+                        <li><a>About Us<i style="margin-left: 10px;" class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                    <div id="toggle-mobile">
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="toggle-mobile">
+        <span></span>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        // $("#toggle-mobile").click (function() {
+        //     $("#header-nav").toggleClass("actived")
+        // })
+        // $("#toggle-mobile").click (function() {
+        //     $("#header-nav ul").slideDown(1000);
+        //     $(this).hide()
+        // })
+        // $("#toggle-mobile").click (function() {
+        //     $("#header-nav ul").fadeIn(1000);
+        //     $(this).hide()
+        // })
+        $("#toggle-mobile").click (function() {
+            $("#header-nav ul").show();
+            $(this).hide()
+        })
+    </script>
+</body>
+
+</html>
