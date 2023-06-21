@@ -118,8 +118,11 @@
 }
 @media  screen and (max-width: 426px) {
     .section_four .carousel-indicators{
-        bottom: 235px;
+        bottom: 250px;
         left: 140px !important;
+    }
+    .section_six .carousel-indicators {
+        left: 140px;
     }
     .section_four button {
         margin-left: 100px;
@@ -135,7 +138,27 @@
     #content_footer {
         justify-content: center ;
     }
-    /* #list_footer {
+    #list_footer {
         flex-direction: column;
-    } */
+    }
+    footer {
+        position: relative;
+    }
+    footer #footer_1,
+    footer #footer_2,
+    footer #footer_3 {
+        position: absolute;
+    }
+    footer #footer_1 {
+        bottom: 130px;
+        left: 150px;
+    }
+    footer #footer_3 {
+        bottom: 70px;
+        left: 130px;
+    }
+    footer #footer_2 {
+        bottom: 10px;
+        left: 80px;
+    }
 }
