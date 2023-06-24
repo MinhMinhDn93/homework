@@ -1,0 +1,25 @@
+.list-item {
+    width: 150px;
+    height: 170px;
+}
+.list-item img {    
+    width: 100%;
+    height: auto;
+}
+.btn {
+    width: 120px;
+    background-color: #fff;
+    border: solid 1px #111;
+}
+.btn:hover {
+    background-color: #111;
+    color: #fff;
+}
+.item {
+    width: 270px;
+    height: 450px;
+}
+.item img {
+    width: 100%;
+    height: auto;
+}
